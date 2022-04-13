@@ -1,0 +1,53 @@
+/* p.error {
+    color: red;
+}
+
+p.success {
+    color: green;
+}
+
+p.success.feedback {
+    border: 1px dashed green;
+}
+
+li#content {
+    background-color: pink;
+}
+/* ID is rarely used in css */
+
+/* div p {
+    background-color: lightblue;
+} */ 
+
+/* a[href] {
+    background-color: blueviolet;
+}
+
+a[href="google.com"] {
+    background-color: blueviolet;
+}
+
+a[href*="google"] {
+    background-color: blueviolet;
+}
+
+a[href$=".com"] {
+    background-color: blueviolet;
+} */
+
+div {
+    color:lightcoral;
+    border: 3px black solid;
+    font-weight: bold;
+    margin: 40px;
+}
+
+p {
+    border: inherit;
+    margin: inherit;
+    color: blue;
+}
+
+div p {
+    color: black;
+}

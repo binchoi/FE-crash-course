@@ -1,0 +1,89 @@
+body, li, ul, a, p {
+    font-family: arial;
+    margin: 0px;
+}
+
+header {
+    /* default */
+    /* position: static; */
+
+    /* position: relative; */
+    /* move away from left by 100px */
+    /* left:100px;  */
+    /* top:100px; */
+
+}
+.banner {
+    position: relative;
+}
+
+.banner img {
+    max-width: 100%;
+}
+
+.banner .header {
+    position: absolute;
+    left: 0;
+    top: 30%;
+    background-color: white;
+    color: brown;
+    padding: 30px;
+}
+
+.omg {
+    position: relative;
+}
+
+.banner header {
+    font-size: 50px;
+}
+
+.banner header span {
+    /* inherit and scale from parent's font-size */
+    font-size: 1.8em;
+}
+
+.real-header {
+    background-color: aqua;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index:1;
+    top: 0;
+    left: 0;
+}
+
+.real-header h2 {
+    color: white;
+    border: 8px solid white;
+    padding: 6px 12px;
+    display: inline-block;
+    border-radius: 36px;
+}
+
+nav {
+    background-color: #F4F4F4;
+    padding: 20px;
+    position: sticky;
+    top: 136px;
+}
+
+nav ul {
+    /* allows perfect four column division */
+    white-space: nowrap;
+    /* centralizes in the middle! */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav li {
+    /* should theoretically be divided in four columns */
+    width: 25%;
+    display: inline-block;
+    font-size: 24px;
+}
+
+p {
+    line-height: 2em;
+}
