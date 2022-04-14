@@ -1,0 +1,110 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <title>HabitRacer</title>
+    <style>
+        section {
+            padding: 60px 0;
+        }
+    </style>
+</head>
+
+<body>
+    
+<div class="container-lg" style="padding: 60px 0;">
+    <div class="text-center">
+        <h2>Join the Race: {{race.raceName}}</h2>
+        <h4 class="text-muted">You have been challenged by {{competitor}}</h4>
+        <p class="lead">Begin your self-development rally by filling in the following fields.</p>
+    </div>
+
+    <div class="row justify-content-center my-5 mx-2">
+
+        <div class="col-lg-6">
+            <form>
+                <label for="raceName" class="form-label">Race Name:</label>
+                <div class="mb-3 input-group">
+                    <span class="input-group-text">
+                        <span class="tt" data-bs-placement="left" title="The race name has been decided by {{competitor}}.">
+                            <i class="bi bi-trophy-fill"></i>
+                        </span>
+                    </span>
+                    <input type="text" class="form-control" id="raceName" value="{{race.raceName}}" readonly>
+                </div>
+
+                <label for="wager" class="form-label">Wager:</label>
+                <div class="mb-3 input-group">
+                    <span class="input-group-text">
+                        <span class="tt" data-bs-placement="left" title="This is what is at stake. Join at your own risk.">
+                            <i class="bi bi-piggy-bank-fill"></i>
+                        </span>
+                    </span>
+                    <input type="text" class="form-control" id="wager" value="{{race.wager}}" readonly>
+                </div>
+
+
+                <label for="startDate" class="form-label">Start Date:</label>
+                <div class="mb-3 input-group">
+                    <span class="input-group-text">
+                        <span class="tt" data-bs-placement="left" title="{{competitor}} decided when the race begins.">
+                            <i class="bi bi-play-fill"></i>
+                        </span>
+                    </span>
+                    <input type="date" id="startDate" class="form-control" value="{{race.startDate}}" readonly>
+                </div>
+
+
+                <label for="endDate" class="form-label">End Date:</label>
+                <div class="mb-3 input-group">
+                    <span class="input-group-text">
+                        <span class="tt" data-bs-placement="left" title="Your have the final say of when the race ends.">
+                            <i class="bi bi-stop-fill"></i>
+                        </span>
+                    </span>
+                    <input type="date" id="endDate" class="form-control" value="{{race.endDate}}">
+                </div>
+
+                <label for="fstUserHabit" class="form-label">{{competitor}} will be building the habit of...</label>
+                <div class="mb-3 input-group">
+                    <span class="input-group-text">
+                        <i class="bi bi-check-circle-fill"></i>
+                    </span>
+                    <textarea id="fstUserHabit" class="form-control" style="height: 100px;" readonly>{{race.fstUserHabit}}</textarea>
+                </div>
+
+                <label for="sndUserHabit" class="form-label">What is the habit you will build?</label>
+                <div class="mb-3 input-group">
+                    <span class="input-group-text">
+                        <span class="tt" data-bs-placement="left" title="Describe the habit and what you hope to accomplish each day in detail.">
+                            <i class="bi bi-check-circle-fill"></i>
+                        </span>
+                    </span>
+                    <textarea id="sndUserHabit" class="form-control" style="height: 100px;" placeholder="Exercise at least 30 minutes a day at the fitness gym"></textarea><span class="error-message taxt-small text-danger"> YOYOYO </span>
+                </div>
+
+                <input type="hidden" id="sndUserId" value="{{sndUserId}}">
+                <input type="hidden" id="raceId" value="{{race.id}}">
+
+                <div class="mb-4 text-center">
+                    <a href="/" role="button" class="btn btn-outline-secondary">Cancel</a>
+                    <button type="button" class="btn btn-secondary" id="btn-join-race">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script>
+    const tooltips = document.querySelectorAll('.tt')
+    tooltips.forEach(t => {
+        new bootstrap.Tooltip(t)
+    })
+</script>
+
+</body>
+</html>
